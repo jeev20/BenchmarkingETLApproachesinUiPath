@@ -1,0 +1,1 @@
+-c "IMPORT DATABASE 'C:\Users\Navada\Downloads\duckdb_cli-windows-amd64\First10000';SHOW TABLES; EXPORT DATABASE 'NAME' (FORMAT CSV, DELIMITER '|');"

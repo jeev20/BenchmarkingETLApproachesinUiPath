@@ -1,0 +1,1 @@
+﻿Import-Csv -Path 'INPUTFILE' | Where { $_.job -eq 'Social worker'} | Export-Csv -Path 'OUTPUTFILE' -NoTypeInformation
