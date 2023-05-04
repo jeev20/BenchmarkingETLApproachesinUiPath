@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="FilterUsingParallelFilterDataTable" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="FilterUsingParallelFilterDataTable" this:FilterUsingParallelFilterDataTable.in_InputDataFolder="C:\Users\jeevi\Documents\RustPrograms\InputData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="The data folder containing the input csv data. " Name="in_InputDataFolder" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Output datatable consisting of benchmark result " Name="out_BenchmarkTable" Type="OutArgument(sd:DataTable)" />
@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1355,2689</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1530,3004</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LargeIteration_Csv_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -107,7 +107,7 @@
       <AssemblyReference>DocumentFormat.OpenXml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow filters the datatable using Parallel for each activity" DisplayName="FilterUsingParallelFilterDataTable" sap:VirtualizedContainerService.HintSize="594,2584" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow filters the datatable using Parallel for each activity" DisplayName="FilterUsingParallelFilterDataTable" sap:VirtualizedContainerService.HintSize="706,2939" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="InputData" />
       <Variable x:TypeArguments="ui:CurrentJobInfo" Name="JobInfo" />
@@ -120,21 +120,21 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable sap2010:Annotation.AnnotationText="Approach, FileName, RowsKept, ExecutionTimeSeconds" DataTable="[out_BenchmarkTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="532,102" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Approach&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;FileName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RowsKept&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ExecutionTimeSeconds&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+    <ui:BuildDataTable sap2010:Annotation.AnnotationText="Approach, FileName, RowsKept, ExecutionTimeSeconds" DataTable="[out_BenchmarkTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="644,102" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Approach&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;FileName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;RowsKept&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ExecutionTimeSeconds&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BuildDataTable>
-    <ui:GetCurrentJobInfo DisplayName="Get Current Job Info" sap:VirtualizedContainerService.HintSize="532,25" sap2010:WorkflowViewState.IdRef="GetCurrentJobInfo_1" Result="[JobInfo]" />
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Directory.GetFiles(in_InputDataFolder, &quot;*_input.csv&quot;).OrderBy(Function (x) Path.GetFileName(x))" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="532,1483" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[Directory.GetFiles(in_InputDataFolder, &quot;*_input.csv&quot;).OrderBy(Function (x) Path.GetFileName(x))]">
+    <ui:GetCurrentJobInfo DisplayName="Get Current Job Info" sap:VirtualizedContainerService.HintSize="644,25" sap2010:WorkflowViewState.IdRef="GetCurrentJobInfo_1" Result="[JobInfo]" />
+    <ui:ForEach x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Directory.GetFiles(in_InputDataFolder, &quot;*_input.csv&quot;).OrderBy(Function (x) Path.GetFileName(x))" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="644,1838" sap2010:WorkflowViewState.IdRef="ForEach`1_4" MaxIterations="{x:Null}" Values="[Directory.GetFiles(in_InputDataFolder, &quot;*_input.csv&quot;).OrderBy(Function (x) Path.GetFileName(x))]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1316" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608,1682" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:Timer" Name="TimerObject" />
             </Sequence.Variables>
@@ -143,48 +143,67 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:StartTimer DisplayName="Start Timer" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="StartTimer_1" Timer="[TimerObject]" />
-            <ui:ReadCsvFile DataTable="[InputData]" Delimitator="Comma" DisplayName="Read CSV" FilePath="[currentItem]" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="ReadCsvFile_2" />
-            <ParallelForEach x:TypeArguments="sd:DataRow" DisplayName="Parallel For Each" sap:VirtualizedContainerService.HintSize="434,341" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_2" Values="[InputData.AsEnumerable]">
+            <ui:StartTimer DisplayName="Start Timer" sap:VirtualizedContainerService.HintSize="546,80" sap2010:WorkflowViewState.IdRef="StartTimer_1" Timer="[TimerObject]" />
+            <ui:ReadCsvFile DataTable="[InputData]" Delimitator="Comma" DisplayName="Read CSV" Encoding="{x:Null}" FilePath="[currentItem]" sap:VirtualizedContainerService.HintSize="546,154" sap2010:WorkflowViewState.IdRef="ReadCsvFile_2" IgnoreQuotes="{x:Null}" />
+            <ParallelForEach x:TypeArguments="sd:DataRow" DisplayName="Parallel For Each" sap:VirtualizedContainerService.HintSize="546,707" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_2" Values="[InputData.AsEnumerable]">
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="item" />
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                 </ActivityAction.Argument>
-                <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter on job=&quot;Social worker&quot;" DataTable="[InputData]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[InputData]" SelectColumnsMode="Keep">
-                  <ui:FilterDataTable.Filters>
-                    <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                      <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-                        <ui:FilterOperationArgument.Column>
-                          <InArgument x:TypeArguments="x:String">[item("job").ToString]</InArgument>
-                        </ui:FilterOperationArgument.Column>
-                        <ui:FilterOperationArgument.Operand>
-                          <InArgument x:TypeArguments="x:String">["Social worker"]</InArgument>
-                        </ui:FilterOperationArgument.Operand>
-                      </ui:FilterOperationArgument>
-                    </scg:List>
-                  </ui:FilterDataTable.Filters>
-                  <ui:FilterDataTable.SelectColumns>
-                    <scg:List x:TypeArguments="InArgument" Capacity="4">
-                      <x:Null />
-                    </scg:List>
-                  </ui:FilterDataTable.SelectColumns>
+                <Sequence sap:VirtualizedContainerService.HintSize="496,557" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="Job" />
+                  </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                </ui:FilterDataTable>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[Job]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[row("job").ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[Job]" />
+                  <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter on job=&quot;Social worker&quot;" DataTable="[InputData]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,192" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[InputData]" SelectColumnsMode="Keep">
+                    <ui:FilterDataTable.Filters>
+                      <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                        <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                          <ui:FilterOperationArgument.Column>
+                            <InArgument x:TypeArguments="x:String">[Job]</InArgument>
+                          </ui:FilterOperationArgument.Column>
+                          <ui:FilterOperationArgument.Operand>
+                            <InArgument x:TypeArguments="x:String">["Social worker"]</InArgument>
+                          </ui:FilterOperationArgument.Operand>
+                        </ui:FilterOperationArgument>
+                      </scg:List>
+                    </ui:FilterDataTable.Filters>
+                    <ui:FilterDataTable.SelectColumns>
+                      <scg:List x:TypeArguments="InArgument" Capacity="4">
+                        <x:Null />
+                      </scg:List>
+                    </ui:FilterDataTable.SelectColumns>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:FilterDataTable>
+                </Sequence>
               </ActivityAction>
             </ParallelForEach>
-            <ui:StopTimer DisplayName="Stop Timer" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="StopTimer_1" Timer="[TimerObject]" />
-            <ui:LogMessage sap2010:Annotation.AnnotationText="&quot;|Approach:&quot;+JobInfo.WorkflowName.ToString+&quot;|Rows kept:&quot;+InputData.Rows.Count.ToString+&quot;|&quot;+&quot;ExecutionTime:&quot;+TimerObject.Elapsed.TotalSeconds.ToString+&quot;|&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;|Approach:&quot;+JobInfo.WorkflowName.ToString+&quot;|Rows kept:&quot;+InputData.Rows.Count.ToString+&quot;|&quot;+&quot;ExecutionTime:&quot;+TimerObject.Elapsed.TotalSeconds.ToString+&quot;|&quot;]">
+            <ui:StopTimer DisplayName="Stop Timer" sap:VirtualizedContainerService.HintSize="546,80" sap2010:WorkflowViewState.IdRef="StopTimer_1" Timer="[TimerObject]" />
+            <ui:LogMessage sap2010:Annotation.AnnotationText="&quot;|Approach:&quot;+JobInfo.WorkflowName.ToString+&quot;|Rows kept:&quot;+InputData.Rows.Count.ToString+&quot;|&quot;+&quot;ExecutionTime:&quot;+TimerObject.Elapsed.TotalSeconds.ToString+&quot;|&quot;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;|Approach:&quot;+JobInfo.WorkflowName.ToString+&quot;|Rows kept:&quot;+InputData.Rows.Count.ToString+&quot;|&quot;+&quot;ExecutionTime:&quot;+TimerObject.Elapsed.TotalSeconds.ToString+&quot;|&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{JobInfo.WorkflowName,Path.GetFileName(currentItem),InputData.Rows.Count.tostring,TimerObject.Elapsed.TotalSeconds.ToString }]" DataTable="[out_BenchmarkTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+            <ui:AddDataRow ArrayRow="[{JobInfo.WorkflowName,Path.GetFileName(currentItem),InputData.Rows.Count.tostring,TimerObject.Elapsed.TotalSeconds.ToString }]" DataRow="{x:Null}" DataTable="[out_BenchmarkTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="546,186" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
@@ -194,9 +213,9 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:WriteCsvFile AddHeaders="True" DataTable="[out_BenchmarkTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="C:\temp\BenchmarkingResults\FilterUsingParallelFilterDatatableBenchmarkResults.csv" sap:VirtualizedContainerService.HintSize="532,154" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True" />
-    <ui:OutputDataTable DataTable="[out_BenchmarkTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="532,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[BenchmarkDataString]" />
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Clean up" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="532,83" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Directory.GetFiles(Environment.CurrentDirectory, &quot;*_output.csv&quot;).OrderBy(Function (x) Path.GetFileName(x))]">
+    <ui:WriteCsvFile AddHeaders="True" DataTable="[out_BenchmarkTable]" Delimitator="Comma" DisplayName="Write CSV" Encoding="{x:Null}" FilePath="C:\temp\BenchmarkingResults\FilterUsingParallelFilterDatatableBenchmarkResults.csv" sap:VirtualizedContainerService.HintSize="644,154" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True" />
+    <ui:OutputDataTable DataTable="[out_BenchmarkTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="644,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[BenchmarkDataString]" />
+    <ui:ForEach x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Clean up" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="644,83" sap2010:WorkflowViewState.IdRef="ForEach`1_2" MaxIterations="{x:Null}" Values="[Directory.GetFiles(Environment.CurrentDirectory, &quot;*_output.csv&quot;).OrderBy(Function (x) Path.GetFileName(x))]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
