@@ -20,6 +20,7 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -38,7 +39,9 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": []
+      "ignoredFiles": [
+        "FilterBenchmarking/FilterUsingParallelFilterDataTable.xaml"
+      ]
     },
     "fileInfoCollection": [],
     "modernBehavior": true
